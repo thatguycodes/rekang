@@ -1,0 +1,24 @@
+{
+  "name": "rekang",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/rekang/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "rekang:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "rekang:build:development"
+        },
+        "production": {
+          "buildTarget": "rekang:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
